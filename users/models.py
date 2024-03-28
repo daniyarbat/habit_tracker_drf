@@ -8,6 +8,7 @@ class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True, verbose_name='Email')
     name = models.CharField(max_length=50, verbose_name='Имя', **NULLABLE)
+    telegram_id = models.TextField(verbose_name='id чата в телеге', **NULLABLE)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
