@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import timedelta
 from django.conf import settings
 
 NULLABLE = {'null': True, 'blank': True}
