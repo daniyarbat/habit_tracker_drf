@@ -14,12 +14,12 @@ class RewardAndHabitValidator:
 
 
 class ActionTimeValidator:
-    def __init__(self, action_time):
-        self.action_time = action_time
+    def __init__(self, time):
+        self.time = time
 
     def __call__(self, value):
-        action_time = dict(value).get(self.action_time)
-        if action_time > 120:
+        time = dict(value).get(self.time)
+        if time > 120:
             raise ValidationError('Время выполнения привычки не должно быть больше 120 секунд')
 
 

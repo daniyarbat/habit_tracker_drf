@@ -185,7 +185,6 @@ CELERY_TASK_TRACK_STARTED = True
 # Максимальное время на выполнение задачи
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
-
 TELEBOT_KEY = os.getenv('TELEBOT_KEY')
 
 CELERY_BEAT_SCHEDULE = {

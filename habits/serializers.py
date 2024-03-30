@@ -11,7 +11,7 @@ class HabitSerializer(serializers.ModelSerializer):
 
         validators = [
             RewardAndHabitValidator(reward='reward', habit='associated_hab'),
-            ActionTimeValidator(action_time='action_time'),
+            ActionTimeValidator(time='action_time'),
             IsNiceValidator(habit='associated_hab'),
             NiceHabitValidator(habit_is_nice='is_nice', reward='reward', habit='associated_hab'),
             PeriodValidator(period='period')
