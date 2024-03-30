@@ -1,4 +1,5 @@
 import datetime
+
 import requests
 from celery import shared_task
 from django.conf import settings
@@ -51,8 +52,8 @@ def check_updates():
 
             try:
                 user = User.objects.get(telegram_user_name=telegram_user_name)
-                if user.telegram_id is None:
-                    user.telegram_id = telegram_user_chat_id
+                if user.chat_id is None:
+                    user.chat_id = telegram_user_chat_id
                     user.save()
             except ObjectDoesNotExist:
                 print("Пользователь не найден в базе данных.")
